@@ -1,0 +1,73 @@
+/* Сброс базовых стилей для более чистого дизайна */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Светлый фон */
+    color: #333; /* Тёмный цвет текста для контраста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Заполняем всю высоту окна */
+}
+
+.container {
+    text-align: center; /* Центрируем текст и элементы внутри контейнера */
+}
+
+h1 {
+    color: #003366; /* Тёмно-синий цвет */
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #ffffff; /* Белый фон формы */
+    padding: 20px;
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+    width: 100%;
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 0 auto; /* Центрирование формы */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left; /* Выравнивание текста лейблов по левому краю */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Вычисляемую ширину с учетом отступов */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Скругленные углы полей ввода */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине элемента */
+}
+
+button {
+    width: calc(100% - 20px); /* Вычисляемую ширину с учетом отступов */
+    padding: 10px;
+    background-color: #003366; /* Тёмно-синий цвет кнопки */
+    color: #ffffff; /* Белый текст на кнопке */
+    border: none;
+    border-radius: 4px; /* Скругленные углы кнопки */
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине элемента */
+}
+
+button:hover {
+    background-color: #002244; /* Более тёмный оттенок синего при наведении */
+}
+
+button:focus {
+    outline: none; /* Убираем стандартную обводку фокуса */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Добавляем легкое тени при фокусе */
+}
