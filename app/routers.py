@@ -163,8 +163,8 @@ def can_grab_docs(token: str = Depends(verify_token), db: Session = Depends(get_
     if not user.docs_grabbed_at:
         return JSONResponse({'can_grab': True}, status_code=200)
 
-    curr_datetime = datetime.now(timezone.utc)
-    if curr_datetime.day >= user.docs_grabbed_at.day + 1:
+    curr_datetime = datetime.now(timezone.utc).date()
+    if curr_datetime > user.docs_grabbed_at.date():
         return JSONResponse({'can_grab': True}, status_code=200)
 
     return JSONResponse({'can_grab': False, 'time_left': get_time_until_midnight()}, status_code=200)
