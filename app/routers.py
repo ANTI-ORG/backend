@@ -114,7 +114,7 @@ def return_chains(db: Session = Depends(get_db)):
     return [return_chain(x.id, db) for x in chains]
 
 
-@router.get("/task/{task_id}", response_model=TaskBase)
+@router.get("/tasks/{task_id}", response_model=TaskBase)
 async def return_task(task_id: int, db: Session = Depends(get_db)):
     if not task_id:
         raise HTTPException(status_code=400, detail="Task id must be provided")
@@ -128,7 +128,7 @@ async def return_task(task_id: int, db: Session = Depends(get_db)):
     return task
 
 
-@router.get("/project/{project_id}", response_model=ProjectBase)
+@router.get("/projects/{project_id}", response_model=ProjectBase)
 async def return_project(project_id: int, db: Session = Depends(get_db)):
     if not project_id:
         raise HTTPException(status_code=400, detail="Project id must be provided")
@@ -142,7 +142,7 @@ async def return_project(project_id: int, db: Session = Depends(get_db)):
     return project
 
 
-@router.get("/chain/{chain_id}", response_model=ChainBase)
+@router.get("/chains/{chain_id}", response_model=ChainBase)
 async def return_chain(chain_id: int, db: Session = Depends(get_db)):
     if not chain_id:
         raise HTTPException(status_code=400, detail="Chain id must be provided")
