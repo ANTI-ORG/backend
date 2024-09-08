@@ -80,7 +80,7 @@ class User(Base):
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()), index=True)
     username = Column(String(50), index=True, unique=True, nullable=False)
     xp = Column(Integer, default=0)
-    rang_id = Column(Integer, default=1)
+    rank_id = Column(Integer, default=1)
     max_docs_streak = Column(Integer, default=0)
     curr_docs_streak = Column(Integer, default=0)
     previous_docs_streak = Column(Integer, default=0)
