@@ -32,7 +32,7 @@ class UserBase(UsernameSchema):
     id: str
     wallets: List[WalletBase] = []  # Добавляем список кошельков
     xp: int
-    rang_id: int
+    rank_id: int
     registered_at: datetime
     avatar: str
 
